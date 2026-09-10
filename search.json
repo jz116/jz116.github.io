@@ -1,0 +1,44 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Home",
+    "section": "",
+    "text": "This website documents my work in AD688: Big Data and Cloud Analytics for Business. It demonstrates a reproducible cloud analytics environment using AWS EC2, Python, PySpark, Quarto, Git, and GitHub.\n\n\nThe following code creates a small PySpark dataframe containing example career-match records and displays the records with the highest scores.\n\nimport os\nfrom pyspark.sql import SparkSession\n\nos.environ[\"SPARK_LOCAL_IP\"] = \"127.0.0.1\"\n\nspark = (\n    SparkSession.builder\n    .master(\"local[1]\")\n    .appName(\"AD688QuartoDemo\")\n    .config(\"spark.driver.memory\", \"512m\")\n    .config(\"spark.ui.enabled\", \"false\")\n    .getOrCreate()\n)\n\nspark.sparkContext.setLogLevel(\"ERROR\")\n\nrecords = [\n    (\"Data Analyst\", \"Technology\", 88),\n    (\"Business Analyst\", \"Finance\", 84),\n    (\"Data Scientist\", \"Healthcare\", 91),\n    (\"Machine Learning Engineer\", \"Technology\", 95),\n    (\"Cloud Data Engineer\", \"Consulting\", 89),\n]\n\ncolumns = [\"career\", \"industry\", \"match_score\"]\n\ncareer_df = spark.createDataFrame(records, columns)\npreview = career_df.orderBy(\"match_score\", ascending=False).toPandas()\n\nspark.stop()\n\npreview\n\n\n\nTable 1: Sample career-match records created with PySpark\n\n\n\n\n\n\n\n\n\n\ncareer\nindustry\nmatch_score\n\n\n\n\n0\nMachine Learning Engineer\nTechnology\n95\n\n\n1\nData Scientist\nHealthcare\n91\n\n\n2\nCloud Data Engineer\nConsulting\n89\n\n\n3\nData Analyst\nTechnology\n88\n\n\n4\nBusiness Analyst\nFinance\n84"
+  },
+  {
+    "objectID": "index.html#pyspark-demonstration",
+    "href": "index.html#pyspark-demonstration",
+    "title": "Home",
+    "section": "",
+    "text": "The following code creates a small PySpark dataframe containing example career-match records and displays the records with the highest scores.\n\nimport os\nfrom pyspark.sql import SparkSession\n\nos.environ[\"SPARK_LOCAL_IP\"] = \"127.0.0.1\"\n\nspark = (\n    SparkSession.builder\n    .master(\"local[1]\")\n    .appName(\"AD688QuartoDemo\")\n    .config(\"spark.driver.memory\", \"512m\")\n    .config(\"spark.ui.enabled\", \"false\")\n    .getOrCreate()\n)\n\nspark.sparkContext.setLogLevel(\"ERROR\")\n\nrecords = [\n    (\"Data Analyst\", \"Technology\", 88),\n    (\"Business Analyst\", \"Finance\", 84),\n    (\"Data Scientist\", \"Healthcare\", 91),\n    (\"Machine Learning Engineer\", \"Technology\", 95),\n    (\"Cloud Data Engineer\", \"Consulting\", 89),\n]\n\ncolumns = [\"career\", \"industry\", \"match_score\"]\n\ncareer_df = spark.createDataFrame(records, columns)\npreview = career_df.orderBy(\"match_score\", ascending=False).toPandas()\n\nspark.stop()\n\npreview\n\n\n\nTable 1: Sample career-match records created with PySpark\n\n\n\n\n\n\n\n\n\n\ncareer\nindustry\nmatch_score\n\n\n\n\n0\nMachine Learning Engineer\nTechnology\n95\n\n\n1\nData Scientist\nHealthcare\n91\n\n\n2\nCloud Data Engineer\nConsulting\n89\n\n\n3\nData Analyst\nTechnology\n88\n\n\n4\nBusiness Analyst\nFinance\n84"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "I am a senior Computer Science student studying how cloud computing, big-data pipelines, and analytics can support business decisions."
+  },
+  {
+    "objectID": "about.html#about-me",
+    "href": "about.html#about-me",
+    "title": "About",
+    "section": "",
+    "text": "I am a senior Computer Science student studying how cloud computing, big-data pipelines, and analytics can support business decisions."
+  },
+  {
+    "objectID": "about.html#about-this-website",
+    "href": "about.html#about-this-website",
+    "title": "About",
+    "section": "About This Website",
+    "text": "About This Website\nThis website was developed on an AWS EC2 Ubuntu instance and version-controlled with Git and GitHub. Quarto combines the narrative, executable Python code, and generated results in a reproducible format."
+  },
+  {
+    "objectID": "about.html#computing-environment",
+    "href": "about.html#computing-environment",
+    "title": "About",
+    "section": "Computing Environment",
+    "text": "Computing Environment\nThe following Python cell reports several packages used in this project.\n\nimport platform\nimport pandas as pd\nimport pyspark\n\nenvironment = pd.DataFrame(\n    {\n        \"Tool\": [\"Python\", \"PySpark\", \"pandas\"],\n        \"Version\": [\n            platform.python_version(),\n            pyspark.__version__,\n            pd.__version__,\n        ],\n    }\n)\n\nenvironment\n\n\n\n\n\n\n\n\nTool\nVersion\n\n\n\n\n0\nPython\n3.14.4\n\n\n1\nPySpark\n4.2.0\n\n\n2\npandas\n2.3.3"
+  }
+]
