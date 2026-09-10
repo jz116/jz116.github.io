@@ -1,5 +1,35 @@
 ---
 title: "About"
+jupyter: python3
 ---
 
-About this site
+## About Me
+
+I am a senior Computer Science student studying how cloud computing, big-data pipelines, and analytics can support business decisions.
+
+## About This Website
+
+This website was developed on an AWS EC2 Ubuntu instance and version-controlled with Git and GitHub. Quarto combines the narrative, executable Python code, and generated results in a reproducible format.
+
+## Computing Environment
+
+The following Python cell reports several packages used in this project.
+
+```{python}
+import platform
+import pandas as pd
+import pyspark
+
+environment = pd.DataFrame(
+    {
+        "Tool": ["Python", "PySpark", "pandas"],
+        "Version": [
+            platform.python_version(),
+            pyspark.__version__,
+            pd.__version__,
+        ],
+    }
+)
+
+environment
+```

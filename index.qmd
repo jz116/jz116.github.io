@@ -1,11 +1,50 @@
 ---
-title: "Welcome to My Website"
-author: "Your Name"
-date: "2026-08-17"
-format:
-  html:
-    theme: journal
-    toc: true
+title: "Home"
+jupyter: python3
 ---
-# Hello, World!  
-Welcome to my Quarto website.  
+
+# Welcome
+
+This website documents my work in AD688: Big Data and Cloud Analytics for Business. It demonstrates a reproducible cloud analytics environment using AWS EC2, Python, PySpark, Quarto, Git, and GitHub.
+
+## PySpark Demonstration
+
+The following code creates a small PySpark dataframe containing example career-match records and displays the records with the highest scores.
+
+```{python}
+#| label: tbl-career-sample
+#| tbl-cap: "Sample career-match records created with PySpark"
+
+import os
+from pyspark.sql import SparkSession
+
+os.environ["SPARK_LOCAL_IP"] = "127.0.0.1"
+
+spark = (
+    SparkSession.builder
+    .master("local[1]")
+    .appName("AD688QuartoDemo")
+    .config("spark.driver.memory", "512m")
+    .config("spark.ui.enabled", "false")
+    .getOrCreate()
+)
+
+spark.sparkContext.setLogLevel("ERROR")
+
+records = [
+    ("Data Analyst", "Technology", 88),
+    ("Business Analyst", "Finance", 84),
+    ("Data Scientist", "Healthcare", 91),
+    ("Machine Learning Engineer", "Technology", 95),
+    ("Cloud Data Engineer", "Consulting", 89),
+]
+
+columns = ["career", "industry", "match_score"]
+
+career_df = spark.createDataFrame(records, columns)
+preview = career_df.orderBy("match_score", ascending=False).toPandas()
+
+spark.stop()
+
+preview
+```
