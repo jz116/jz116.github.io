@@ -2,43 +2,162 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Home",
+    "title": "Jiecheng Zhu",
     "section": "",
-    "text": "This website documents my work in AD688: Big Data and Cloud Analytics for Business. It demonstrates a reproducible cloud analytics environment using AWS EC2, Python, PySpark, Quarto, Git, and GitHub.\n\n\nThe following code creates a small PySpark dataframe containing example career-match records and displays the records with the highest scores.\n\nimport os\nfrom pyspark.sql import SparkSession\n\nos.environ[\"SPARK_LOCAL_IP\"] = \"127.0.0.1\"\n\nspark = (\n    SparkSession.builder\n    .master(\"local[1]\")\n    .appName(\"AD688QuartoDemo\")\n    .config(\"spark.driver.memory\", \"512m\")\n    .config(\"spark.ui.enabled\", \"false\")\n    .getOrCreate()\n)\n\nspark.sparkContext.setLogLevel(\"ERROR\")\n\nrecords = [\n    (\"Data Analyst\", \"Technology\", 88),\n    (\"Business Analyst\", \"Finance\", 84),\n    (\"Data Scientist\", \"Healthcare\", 91),\n    (\"Machine Learning Engineer\", \"Technology\", 95),\n    (\"Cloud Data Engineer\", \"Consulting\", 89),\n]\n\ncolumns = [\"career\", \"industry\", \"match_score\"]\n\ncareer_df = spark.createDataFrame(records, columns)\npreview = career_df.orderBy(\"match_score\", ascending=False).toPandas()\n\nspark.stop()\n\npreview\n\n\n\nTable 1: Sample career-match records created with PySpark\n\n\n\n\n\n\n\n\n\n\ncareer\nindustry\nmatch_score\n\n\n\n\n0\nMachine Learning Engineer\nTechnology\n95\n\n\n1\nData Scientist\nHealthcare\n91\n\n\n2\nCloud Data Engineer\nConsulting\n89\n\n\n3\nData Analyst\nTechnology\n88\n\n\n4\nBusiness Analyst\nFinance\n84"
+    "text": "I build reliable software and data-driven systems, from multithreaded network servers and distributed applications to full-stack platforms and intelligent navigation systems.\nI hold a bachelor’s degree in Computer Science from the University of California, Santa Cruz, and I am pursuing a master’s degree in Applied Business Analytics at Boston University. My current interests include machine learning, deep learning, software engineering, and cloud-based analytics.\nView My Projects\nLearn More About Me"
   },
   {
-    "objectID": "index.html#pyspark-demonstration",
-    "href": "index.html#pyspark-demonstration",
-    "title": "Home",
-    "section": "",
-    "text": "The following code creates a small PySpark dataframe containing example career-match records and displays the records with the highest scores.\n\nimport os\nfrom pyspark.sql import SparkSession\n\nos.environ[\"SPARK_LOCAL_IP\"] = \"127.0.0.1\"\n\nspark = (\n    SparkSession.builder\n    .master(\"local[1]\")\n    .appName(\"AD688QuartoDemo\")\n    .config(\"spark.driver.memory\", \"512m\")\n    .config(\"spark.ui.enabled\", \"false\")\n    .getOrCreate()\n)\n\nspark.sparkContext.setLogLevel(\"ERROR\")\n\nrecords = [\n    (\"Data Analyst\", \"Technology\", 88),\n    (\"Business Analyst\", \"Finance\", 84),\n    (\"Data Scientist\", \"Healthcare\", 91),\n    (\"Machine Learning Engineer\", \"Technology\", 95),\n    (\"Cloud Data Engineer\", \"Consulting\", 89),\n]\n\ncolumns = [\"career\", \"industry\", \"match_score\"]\n\ncareer_df = spark.createDataFrame(records, columns)\npreview = career_df.orderBy(\"match_score\", ascending=False).toPandas()\n\nspark.stop()\n\npreview\n\n\n\nTable 1: Sample career-match records created with PySpark\n\n\n\n\n\n\n\n\n\n\ncareer\nindustry\nmatch_score\n\n\n\n\n0\nMachine Learning Engineer\nTechnology\n95\n\n\n1\nData Scientist\nHealthcare\n91\n\n\n2\nCloud Data Engineer\nConsulting\n89\n\n\n3\nData Analyst\nTechnology\n88\n\n\n4\nBusiness Analyst\nFinance\n84"
+    "objectID": "index.html#areas-of-focus",
+    "href": "index.html#areas-of-focus",
+    "title": "Jiecheng Zhu",
+    "section": "Areas of Focus",
+    "text": "Areas of Focus\n\n\nSoftware Engineering\nI design and implement reliable applications using C/C++, Python, JavaScript, Java, and modern software-development practices.\n\n\nData and Machine Learning\nI use Python, SQL, R, and cloud technologies to prepare data, identify patterns, and develop practical analytical solutions.\n\n\nSystems and Algorithms\nMy experience includes networking, concurrency, distributed systems, data structures, graph algorithms, and A* path planning."
+  },
+  {
+    "objectID": "index.html#featured-projects",
+    "href": "index.html#featured-projects",
+    "title": "Jiecheng Zhu",
+    "section": "Featured Projects",
+    "text": "Featured Projects\nMy portfolio includes a multithreaded HTTP server, a distributed backup system using vector clocks, a full-stack key-value storage application, and an A*-based navigation system.\nExplore All Projects →"
   },
   {
     "objectID": "about.html",
     "href": "about.html",
-    "title": "About",
+    "title": "About Me",
     "section": "",
-    "text": "I am a senior Computer Science student studying how cloud computing, big-data pipelines, and analytics can support business decisions."
+    "text": "I am a computer science graduate and an Applied Business Analytics master’s student with interests in software engineering, machine learning, data analytics, and distributed systems. I enjoy translating technical ideas into dependable applications that solve practical problems.\nMy project experience spans low-level network programming, concurrent systems, REST APIs, full-stack development, databases, path-planning algorithms, and cloud-based data workflows. These experiences have taught me to approach complex problems systematically, evaluate tradeoffs, and build solutions that are both functional and understandable."
   },
   {
-    "objectID": "about.html#about-me",
-    "href": "about.html#about-me",
-    "title": "About",
+    "objectID": "about.html#professional-introduction",
+    "href": "about.html#professional-introduction",
+    "title": "About Me",
     "section": "",
-    "text": "I am a senior Computer Science student studying how cloud computing, big-data pipelines, and analytics can support business decisions."
+    "text": "I am a computer science graduate and an Applied Business Analytics master’s student with interests in software engineering, machine learning, data analytics, and distributed systems. I enjoy translating technical ideas into dependable applications that solve practical problems.\nMy project experience spans low-level network programming, concurrent systems, REST APIs, full-stack development, databases, path-planning algorithms, and cloud-based data workflows. These experiences have taught me to approach complex problems systematically, evaluate tradeoffs, and build solutions that are both functional and understandable."
   },
   {
-    "objectID": "about.html#about-this-website",
-    "href": "about.html#about-this-website",
-    "title": "About",
-    "section": "About This Website",
-    "text": "About This Website\nThis website was developed on an AWS EC2 Ubuntu instance and version-controlled with Git and GitHub. Quarto combines the narrative, executable Python code, and generated results in a reproducible format."
+    "objectID": "about.html#education",
+    "href": "about.html#education",
+    "title": "About Me",
+    "section": "Education",
+    "text": "Education\n\nBoston University\nMaster of Science in Applied Business Analytics\nExpected graduation: Q2 2027\nMy graduate studies focus on business analytics, machine learning, deep learning, cloud computing, data management, and the practical use of data to support decisions.\n\n\nUniversity of California, Santa Cruz\nBachelor of Science in Computer Science\nGraduated: June 2025\nMy undergraduate studies developed my foundation in programming, algorithms, data structures, operating systems, computer networks, databases, and software development."
   },
   {
-    "objectID": "about.html#computing-environment",
-    "href": "about.html#computing-environment",
-    "title": "About",
-    "section": "Computing Environment",
-    "text": "Computing Environment\nThe following Python cell reports several packages used in this project.\n\nimport platform\nimport pandas as pd\nimport pyspark\n\nenvironment = pd.DataFrame(\n    {\n        \"Tool\": [\"Python\", \"PySpark\", \"pandas\"],\n        \"Version\": [\n            platform.python_version(),\n            pyspark.__version__,\n            pd.__version__,\n        ],\n    }\n)\n\nenvironment\n\n\n\n\n\n\n\n\nTool\nVersion\n\n\n\n\n0\nPython\n3.14.4\n\n\n1\nPySpark\n4.2.0\n\n\n2\npandas\n2.3.3"
+    "objectID": "about.html#technical-interests",
+    "href": "about.html#technical-interests",
+    "title": "About Me",
+    "section": "Technical Interests",
+    "text": "Technical Interests\n\n\nSoftware Systems\nI am interested in network programming, concurrency, distributed systems, backend services, and reliable application design.\n\n\nMachine Learning\nI am developing my knowledge of machine learning and deep learning, with an emphasis on applying models to practical analytical problems.\n\n\nAlgorithms\nI enjoy solving problems involving graphs, search, shortest paths, optimization, dynamic programming, and path planning."
+  },
+  {
+    "objectID": "about.html#technical-skills",
+    "href": "about.html#technical-skills",
+    "title": "About Me",
+    "section": "Technical Skills",
+    "text": "Technical Skills\nProgramming languages: C, C++, Python, SQL, JavaScript, Java, R, HTML, and Haskell\nFrameworks and technologies: React, Node.js, Express, FastAPI, MongoDB, HTTPX, Swagger, Git, Spark, and Quarto\nCore concepts: Data structures, algorithms, object-oriented programming, REST APIs, concurrent programming, distributed systems, relational databases, data visualization, and cloud analytics"
+  },
+  {
+    "objectID": "about.html#career-goals",
+    "href": "about.html#career-goals",
+    "title": "About Me",
+    "section": "Career Goals",
+    "text": "Career Goals\nMy goal is to contribute to software, data, or machine-learning projects that combine strong engineering practices with practical problem-solving. I am particularly interested in opportunities where I can continue developing scalable systems, strengthen my machine-learning expertise, and work with teams that value thoughtful technical design.\nView My Projects"
+  },
+  {
+    "objectID": "contact.html",
+    "href": "contact.html",
+    "title": "Contact",
+    "section": "",
+    "text": "I welcome opportunities to discuss software engineering, data analytics, machine learning, and technical projects. Please feel free to contact me through email or connect with me through my professional profiles.\n\n\n\nFor professional inquiries and networking:\nSend Me an Email\n\n\n\nView my source code, technical projects, and development activity:\nVisit My GitHub\n\n\n\nConnect with me and view my professional profile:\nConnect on LinkedIn"
+  },
+  {
+    "objectID": "contact.html#lets-connect",
+    "href": "contact.html#lets-connect",
+    "title": "Contact",
+    "section": "",
+    "text": "I welcome opportunities to discuss software engineering, data analytics, machine learning, and technical projects. Please feel free to contact me through email or connect with me through my professional profiles.\n\n\n\nFor professional inquiries and networking:\nSend Me an Email\n\n\n\nView my source code, technical projects, and development activity:\nVisit My GitHub\n\n\n\nConnect with me and view my professional profile:\nConnect on LinkedIn"
+  },
+  {
+    "objectID": "contact.html#areas-of-interest",
+    "href": "contact.html#areas-of-interest",
+    "title": "Contact",
+    "section": "Areas of Interest",
+    "text": "Areas of Interest\nI am especially interested in connecting about:\n\nSoftware engineering and backend development\nData analytics and cloud computing\nMachine learning and artificial intelligence\nDistributed systems and networking\nTechnical collaboration and professional opportunities"
+  },
+  {
+    "objectID": "contact.html#response",
+    "href": "contact.html#response",
+    "title": "Contact",
+    "section": "Response",
+    "text": "Response\nEmail is the best way to reach me. I will respond to professional messages as soon as possible."
+  },
+  {
+    "objectID": "cv.html",
+    "href": "cv.html",
+    "title": "Curriculum Vitae",
+    "section": "",
+    "text": "I am a computer science graduate and Applied Business Analytics master’s student with experience in software engineering, systems programming, full-stack development, distributed computing, and data analytics. My technical interests include machine learning, deep learning, cloud computing, and the development of reliable software systems.\n Download My CV as a PDF"
+  },
+  {
+    "objectID": "cv.html#professional-summary",
+    "href": "cv.html#professional-summary",
+    "title": "Curriculum Vitae",
+    "section": "",
+    "text": "I am a computer science graduate and Applied Business Analytics master’s student with experience in software engineering, systems programming, full-stack development, distributed computing, and data analytics. My technical interests include machine learning, deep learning, cloud computing, and the development of reliable software systems.\n Download My CV as a PDF"
+  },
+  {
+    "objectID": "cv.html#education",
+    "href": "cv.html#education",
+    "title": "Curriculum Vitae",
+    "section": "Education",
+    "text": "Education\n\n\n\n\n\n\n\n\nDegree\nInstitution\nCompletion\n\n\n\n\nM.S. in Applied Business Analytics\nBoston University\nExpected Q2 2027\n\n\nB.S. in Computer Science\nUniversity of California, Santa Cruz\nJune 2025"
+  },
+  {
+    "objectID": "cv.html#technical-expertise",
+    "href": "cv.html#technical-expertise",
+    "title": "Curriculum Vitae",
+    "section": "Technical Expertise",
+    "text": "Technical Expertise\nProgramming: C, C++, Python, SQL, JavaScript, Java, R, HTML, and Haskell\nWeb and backend development: React, Node.js, Express, FastAPI, REST APIs, Swagger, and HTTPX\nDatabases and data: MongoDB, relational data, Spark, data cleaning, data visualization, and analytical workflows\nSystems and algorithms: Socket programming, concurrency, distributed systems, vector clocks, graph algorithms, dynamic programming, and A-star search\nDevelopment tools: Git, GitHub, Quarto, Visual Studio Code, Linux, and AWS EC2"
+  },
+  {
+    "objectID": "cv.html#selected-project-experience",
+    "href": "cv.html#selected-project-experience",
+    "title": "Curriculum Vitae",
+    "section": "Selected Project Experience",
+    "text": "Selected Project Experience\n\nMultithreaded HTTP Server: Created a concurrent C server supporting HTTP GET and PUT operations with synchronized file access.\nDistributed Backup System: Implemented a three-server key-value system using FastAPI, asynchronous communication, and vector clocks.\nFull-Stack Storage System: Built a React, Express, and MongoDB application with RESTful routes and interactive Swagger documentation.\nPath Planning System: Developed a Unity navigation system using convex-map decomposition and A-star search.\n\nExplore My Projects"
+  },
+  {
+    "objectID": "projects.html",
+    "href": "projects.html",
+    "title": "Projects",
+    "section": "",
+    "text": "This portfolio highlights projects that demonstrate my experience with systems programming, distributed computing, full-stack development, algorithms, and intelligent navigation."
+  },
+  {
+    "objectID": "projects.html#multithreaded-http-server",
+    "href": "projects.html#multithreaded-http-server",
+    "title": "Projects",
+    "section": "Multithreaded HTTP Server",
+    "text": "Multithreaded HTTP Server\nJanuary 2024 – March 2024\nI developed a multithreaded HTTP server in C that processes simultaneous client connections and supports HTTP GET and PUT requests. The project strengthened my understanding of socket programming, concurrency, synchronization, and server-side file management.\nKey engineering work:\n\nCreated a new worker thread for each client connection.\nImplemented HTTP request parsing and response generation.\nSupported file uploads and downloads through PUT and GET.\nUsed semaphores and read-write locks to prevent unsafe concurrent file access.\nAdded client-server messaging alongside file-transfer functionality.\n\nTechnologies: C, POSIX sockets, pthreads, semaphores, read-write locks, HTTP\n\n\n\n\n\nflowchart TD\n    A[Client Requests] --&gt; B[HTTP Listener]\n    B --&gt; C[Worker Threads]\n    C --&gt; D[Read Write Locks]\n    D --&gt; E[Server Files]"
+  },
+  {
+    "objectID": "projects.html#distributed-multi-server-backup-system",
+    "href": "projects.html#distributed-multi-server-backup-system",
+    "title": "Projects",
+    "section": "Distributed Multi-Server Backup System",
+    "text": "Distributed Multi-Server Backup System\nApril 2024 – June 2024\nI built a distributed key-value storage and backup system consisting of three cooperating servers. The servers replicate data and use vector clocks to preserve causal relationships between updates.\nKey engineering work:\n\nImplemented three asynchronous FastAPI servers.\nUsed vector clocks to track the causal order of key-value updates.\nReplicated updated values and clock information between servers.\nCompared client and server clocks before returning requested values.\nDelayed stale responses until the server received an acceptable version.\nUsed Python coroutines and HTTPX for asynchronous communication.\n\nTechnologies: Python, FastAPI, HTTPX, asynchronous programming, REST APIs, vector clocks\n\n\n\n\n\nflowchart TD\n    A[Client] --&gt; B[Server A]\n    A --&gt; C[Server B]\n    A --&gt; D[Server C]\n    B &lt;--&gt; C\n    C &lt;--&gt; D\n    B &lt;--&gt; D\n    B --&gt; E[Replicated Key Value Data]\n    C --&gt; E\n    D --&gt; E"
+  },
+  {
+    "objectID": "projects.html#full-stack-key-value-storage-system",
+    "href": "projects.html#full-stack-key-value-storage-system",
+    "title": "Projects",
+    "section": "Full-Stack Key-Value Storage System",
+    "text": "Full-Stack Key-Value Storage System\nJuly 2024 – September 2024\nI developed a browser-based key-value storage application with a React frontend and an Express and MongoDB backend. The application provides a clear interface for adding, retrieving, and deleting stored values.\nKey engineering work:\n\nDesigned the frontend with reusable React components.\nCreated RESTful backend routes with Node.js and Express.\nStored and retrieved key-value records with MongoDB.\nSupported both local and remote database connections.\nGenerated interactive API documentation with Swagger.\nConnected frontend actions to backend JSON request and response flows.\n\nTechnologies: React, JavaScript, Node.js, Express, MongoDB, Swagger, REST APIs\n\n\n\n\n\nflowchart TD\n    A[React Interface] --&gt; B[Express REST API]\n    C[Swagger Documentation] --&gt; B\n    B --&gt; D[MongoDB]\n    D --&gt; B\n    B --&gt; A"
+  },
+  {
+    "objectID": "projects.html#a-star-path-planning-and-navigation-system",
+    "href": "projects.html#a-star-path-planning-and-navigation-system",
+    "title": "Projects",
+    "section": "A-Star Path Planning and Navigation System",
+    "text": "A-Star Path Planning and Navigation System\nJanuary 2025 – March 2025\nI implemented a navigation system for an intelligent vehicle in Unity. The system transforms a polygonal environment into convex navigation regions and uses the A-star algorithm to plan a valid route to a target.\nKey engineering work:\n\nIdentified concave inset points within polygonal maps.\nApplied recursive bisection to divide maps into convex regions.\nRepresented neighboring regions as a searchable navigation graph.\nUsed A-star search to select an efficient path across the graph.\nGenerated waypoints from region centers and shared-edge midpoints.\nControlled vehicle movement while keeping it inside the map boundaries.\n\nTechnologies: C#, Unity, A-star search, graph algorithms, computational geometry, path planning\n\n\n\n\n\nflowchart TD\n    A[Polygonal Map] --&gt; B[Convex Region Generation]\n    B --&gt; C[Navigation Graph]\n    C --&gt; D[A-Star Search]\n    D --&gt; E[Vehicle Waypoints]"
   }
 ]
