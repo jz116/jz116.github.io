@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Portfolio of software engineering, data analytics, and machine learning projects.">
+<meta name="description" content="Selected software engineering, distributed systems, full-stack, and algorithm projects.">
 
-<title>Jiecheng Zhu</title>
+<title>Projects – Jiecheng Zhu</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -74,6 +74,9 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
+<script src="site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
 
 <link rel="stylesheet" href="styles.css">
@@ -97,7 +100,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="./index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
@@ -105,7 +108,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">About You</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./projects.html"> 
+    <a class="nav-link active" href="./projects.html" aria-current="page"> 
 <span class="menu-text">Projects</span></a>
   </li>  
   <li class="nav-item">
@@ -127,24 +130,34 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Projects</h2>
+   
+  <ul>
+  <li><a href="#multithreaded-http-server" id="toc-multithreaded-http-server" class="nav-link active" data-scroll-target="#multithreaded-http-server">Multithreaded HTTP Server</a></li>
+  <li><a href="#distributed-multi-server-backup-system" id="toc-distributed-multi-server-backup-system" class="nav-link" data-scroll-target="#distributed-multi-server-backup-system">Distributed Multi-Server Backup System</a></li>
+  <li><a href="#full-stack-key-value-storage-system" id="toc-full-stack-key-value-storage-system" class="nav-link" data-scroll-target="#full-stack-key-value-storage-system">Full-Stack Key-Value Storage System</a></li>
+  <li><a href="#a-star-path-planning-and-navigation-system" id="toc-a-star-path-planning-and-navigation-system" class="nav-link" data-scroll-target="#a-star-path-planning-and-navigation-system">A-Star Path Planning and Navigation System</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
-<main class="content column-page" id="quarto-document-content">
+<main class="content column-page-left" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Jiecheng Zhu</h1>
-<p class="subtitle lead">Computer Science | Applied Business Analytics | Machine Learning</p>
+<h1 class="title">Projects</h1>
 </div>
 
 <div>
   <div class="description">
-    Portfolio of software engineering, data analytics, and machine learning projects.
+    Selected software engineering, distributed systems, full-stack, and algorithm projects.
   </div>
 </div>
 
 
-<div class="quarto-title-meta column-page">
+<div class="quarto-title-meta column-page-left">
 
     
   
@@ -156,34 +169,138 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>I build reliable software and data-driven systems, from multithreaded network servers and distributed applications to full-stack platforms and intelligent navigation systems.</p>
-<p>I hold a bachelor’s degree in Computer Science from the University of California, Santa Cruz, and I am pursuing a master’s degree in Applied Business Analytics at Boston University. My current interests include machine learning, deep learning, software engineering, and cloud-based analytics.</p>
-<p><a href="./projects.html" class="btn btn-primary btn-lg">View My Projects</a></p>
-<p><a href="./about.html" class="btn btn-outline-primary btn-lg">Learn More About Me</a></p>
-<section id="areas-of-focus" class="level2">
-<h2 class="anchored" data-anchor-id="areas-of-focus">Areas of Focus</h2>
-<div class="grid">
-<section id="software-engineering" class="level3 g-col-12 g-col-md-4">
-<h3 class="anchored" data-anchor-id="software-engineering">Software Engineering</h3>
-<p>I design and implement reliable applications using C/C++, Python, JavaScript, Java, and modern software-development practices.</p>
-</section>
-<section id="data-and-machine-learning" class="level3 g-col-12 g-col-md-4">
-<h3 class="anchored" data-anchor-id="data-and-machine-learning">Data and Machine Learning</h3>
-<p>I use Python, SQL, R, and cloud technologies to prepare data, identify patterns, and develop practical analytical solutions.</p>
-</section>
-<section id="systems-and-algorithms" class="level3 g-col-12 g-col-md-4">
-<h3 class="anchored" data-anchor-id="systems-and-algorithms">Systems and Algorithms</h3>
-<p>My experience includes networking, concurrency, distributed systems, data structures, graph algorithms, and A* path planning.</p>
-</section>
+<p>This portfolio highlights projects that demonstrate my experience with systems programming, distributed computing, full-stack development, algorithms, and intelligent navigation.</p>
+<section id="multithreaded-http-server" class="level2 project-card">
+<h2 class="anchored" data-anchor-id="multithreaded-http-server">Multithreaded HTTP Server</h2>
+<p><em>January 2024 – March 2024</em></p>
+<p>I developed a multithreaded HTTP server in C that processes simultaneous client connections and supports HTTP <code>GET</code> and <code>PUT</code> requests. The project strengthened my understanding of socket programming, concurrency, synchronization, and server-side file management.</p>
+<p><strong>Key engineering work:</strong></p>
+<ul>
+<li>Created a new worker thread for each client connection.</li>
+<li>Implemented HTTP request parsing and response generation.</li>
+<li>Supported file uploads and downloads through <code>PUT</code> and <code>GET</code>.</li>
+<li>Used semaphores and read-write locks to prevent unsafe concurrent file access.</li>
+<li>Added client-server messaging alongside file-transfer functionality.</li>
+</ul>
+<p><strong>Technologies:</strong> C, POSIX sockets, pthreads, semaphores, read-write locks, HTTP</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TD
+    A[Client Requests] --&gt; B[HTTP Listener]
+    B --&gt; C[Worker Threads]
+    C --&gt; D[Read Write Locks]
+    D --&gt; E[Server Files]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
 </div>
 </section>
-<section id="featured-projects" class="level2">
-<h2 class="anchored" data-anchor-id="featured-projects">Featured Projects</h2>
-<p>My portfolio includes a multithreaded HTTP server, a distributed backup system using vector clocks, a full-stack key-value storage application, and an A*-based navigation system.</p>
-<p><a href="./projects.html" class="btn btn-primary">Explore All Projects →</a></p>
-
-
+<section id="distributed-multi-server-backup-system" class="level2 project-card">
+<h2 class="anchored" data-anchor-id="distributed-multi-server-backup-system">Distributed Multi-Server Backup System</h2>
+<p><em>April 2024 – June 2024</em></p>
+<p>I built a distributed key-value storage and backup system consisting of three cooperating servers. The servers replicate data and use vector clocks to preserve causal relationships between updates.</p>
+<p><strong>Key engineering work:</strong></p>
+<ul>
+<li>Implemented three asynchronous FastAPI servers.</li>
+<li>Used vector clocks to track the causal order of key-value updates.</li>
+<li>Replicated updated values and clock information between servers.</li>
+<li>Compared client and server clocks before returning requested values.</li>
+<li>Delayed stale responses until the server received an acceptable version.</li>
+<li>Used Python coroutines and HTTPX for asynchronous communication.</li>
+</ul>
+<p><strong>Technologies:</strong> Python, FastAPI, HTTPX, asynchronous programming, REST APIs, vector clocks</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TD
+    A[Client] --&gt; B[Server A]
+    A --&gt; C[Server B]
+    A --&gt; D[Server C]
+    B &lt;--&gt; C
+    C &lt;--&gt; D
+    B &lt;--&gt; D
+    B --&gt; E[Replicated Key Value Data]
+    C --&gt; E
+    D --&gt; E
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
 </section>
+<section id="full-stack-key-value-storage-system" class="level2 project-card">
+<h2 class="anchored" data-anchor-id="full-stack-key-value-storage-system">Full-Stack Key-Value Storage System</h2>
+<p><em>July 2024 – September 2024</em></p>
+<p>I developed a browser-based key-value storage application with a React frontend and an Express and MongoDB backend. The application provides a clear interface for adding, retrieving, and deleting stored values.</p>
+<p><strong>Key engineering work:</strong></p>
+<ul>
+<li>Designed the frontend with reusable React components.</li>
+<li>Created RESTful backend routes with Node.js and Express.</li>
+<li>Stored and retrieved key-value records with MongoDB.</li>
+<li>Supported both local and remote database connections.</li>
+<li>Generated interactive API documentation with Swagger.</li>
+<li>Connected frontend actions to backend JSON request and response flows.</li>
+</ul>
+<p><strong>Technologies:</strong> React, JavaScript, Node.js, Express, MongoDB, Swagger, REST APIs</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TD
+    A[React Interface] --&gt; B[Express REST API]
+    C[Swagger Documentation] --&gt; B
+    B --&gt; D[MongoDB]
+    D --&gt; B
+    B --&gt; A
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+</section>
+<section id="a-star-path-planning-and-navigation-system" class="level2 project-card">
+<h2 class="anchored" data-anchor-id="a-star-path-planning-and-navigation-system">A-Star Path Planning and Navigation System</h2>
+<p><em>January 2025 – March 2025</em></p>
+<p>I implemented a navigation system for an intelligent vehicle in Unity. The system transforms a polygonal environment into convex navigation regions and uses the A-star algorithm to plan a valid route to a target.</p>
+<p><strong>Key engineering work:</strong></p>
+<ul>
+<li>Identified concave inset points within polygonal maps.</li>
+<li>Applied recursive bisection to divide maps into convex regions.</li>
+<li>Represented neighboring regions as a searchable navigation graph.</li>
+<li>Used A-star search to select an efficient path across the graph.</li>
+<li>Generated waypoints from region centers and shared-edge midpoints.</li>
+<li>Controlled vehicle movement while keeping it inside the map boundaries.</li>
+</ul>
+<p><strong>Technologies:</strong> C#, Unity, A-star search, graph algorithms, computational geometry, path planning</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TD
+    A[Polygonal Map] --&gt; B[Convex Region Generation]
+    B --&gt; C[Navigation Graph]
+    C --&gt; D[A-Star Search]
+    D --&gt; E[Vehicle Waypoints]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+</section>
+
+
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

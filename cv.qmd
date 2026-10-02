@@ -1,0 +1,42 @@
+---
+title: "Curriculum Vitae"
+description: "Professional background, education, technical expertise, and downloadable CV."
+page-layout: full
+toc: false
+---
+
+## Professional Summary
+
+I am a computer science graduate and Applied Business Analytics master's student with experience in software engineering, systems programming, full-stack development, distributed computing, and data analytics. My technical interests include machine learning, deep learning, cloud computing, and the development of reliable software systems.
+
+<a class="btn btn-primary btn-lg" href="assets/cv/Jiecheng_Zhu_Resume.pdf" download>
+Download My CV as a PDF
+</a>
+
+## Education
+
+| Degree | Institution | Completion |
+|---|---|---|
+| M.S. in Applied Business Analytics | Boston University | Expected Q2 2027 |
+| B.S. in Computer Science | University of California, Santa Cruz | June 2025 |
+
+## Technical Expertise
+
+**Programming:** C, C++, Python, SQL, JavaScript, Java, R, HTML, and Haskell
+
+**Web and backend development:** React, Node.js, Express, FastAPI, REST APIs, Swagger, and HTTPX
+
+**Databases and data:** MongoDB, relational data, Spark, data cleaning, data visualization, and analytical workflows
+
+**Systems and algorithms:** Socket programming, concurrency, distributed systems, vector clocks, graph algorithms, dynamic programming, and A-star search
+
+**Development tools:** Git, GitHub, Quarto, Visual Studio Code, Linux, and AWS EC2
+
+## Selected Project Experience
+
+- **Multithreaded HTTP Server:** Created a concurrent C server supporting HTTP `GET` and `PUT` operations with synchronized file access.
+- **Distributed Backup System:** Implemented a three-server key-value system using FastAPI, asynchronous communication, and vector clocks.
+- **Full-Stack Storage System:** Built a React, Express, and MongoDB application with RESTful routes and interactive Swagger documentation.
+- **Path Planning System:** Developed a Unity navigation system using convex-map decomposition and A-star search.
+
+[Explore My Projects](projects.qmd){.btn .btn-outline-primary}

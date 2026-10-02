@@ -1,35 +1,66 @@
 ---
-title: "About"
-jupyter: python3
+title: "About Me"
+description: "My education, technical interests, and professional goals."
+page-layout: full
+toc: false
 ---
 
-## About Me
+## Professional Introduction
 
-I am a senior Computer Science student studying how cloud computing, big-data pipelines, and analytics can support business decisions.
+I am a computer science graduate and an Applied Business Analytics master's student with interests in software engineering, machine learning, data analytics, and distributed systems. I enjoy translating technical ideas into dependable applications that solve practical problems.
 
-## About This Website
+My project experience spans low-level network programming, concurrent systems, REST APIs, full-stack development, databases, path-planning algorithms, and cloud-based data workflows. These experiences have taught me to approach complex problems systematically, evaluate tradeoffs, and build solutions that are both functional and understandable.
 
-This website was developed on an AWS EC2 Ubuntu instance and version-controlled with Git and GitHub. Quarto combines the narrative, executable Python code, and generated results in a reproducible format.
+## Education
 
-## Computing Environment
+### Boston University
 
-The following Python cell reports several packages used in this project.
+**Master of Science in Applied Business Analytics**  
+Expected graduation: Q2 2027
 
-```{python}
-import platform
-import pandas as pd
-import pyspark
+My graduate studies focus on business analytics, machine learning, deep learning, cloud computing, data management, and the practical use of data to support decisions.
 
-environment = pd.DataFrame(
-    {
-        "Tool": ["Python", "PySpark", "pandas"],
-        "Version": [
-            platform.python_version(),
-            pyspark.__version__,
-            pd.__version__,
-        ],
-    }
-)
+### University of California, Santa Cruz
 
-environment
-```
+**Bachelor of Science in Computer Science**  
+Graduated: June 2025
+
+My undergraduate studies developed my foundation in programming, algorithms, data structures, operating systems, computer networks, databases, and software development.
+
+## Technical Interests
+
+::: {.grid}
+
+::: {.g-col-12 .g-col-md-4}
+### Software Systems
+
+I am interested in network programming, concurrency, distributed systems, backend services, and reliable application design.
+:::
+
+::: {.g-col-12 .g-col-md-4}
+### Machine Learning
+
+I am developing my knowledge of machine learning and deep learning, with an emphasis on applying models to practical analytical problems.
+:::
+
+::: {.g-col-12 .g-col-md-4}
+### Algorithms
+
+I enjoy solving problems involving graphs, search, shortest paths, optimization, dynamic programming, and path planning.
+:::
+
+:::
+
+## Technical Skills
+
+**Programming languages:** C, C++, Python, SQL, JavaScript, Java, R, HTML, and Haskell
+
+**Frameworks and technologies:** React, Node.js, Express, FastAPI, MongoDB, HTTPX, Swagger, Git, Spark, and Quarto
+
+**Core concepts:** Data structures, algorithms, object-oriented programming, REST APIs, concurrent programming, distributed systems, relational databases, data visualization, and cloud analytics
+
+## Career Goals
+
+My goal is to contribute to software, data, or machine-learning projects that combine strong engineering practices with practical problem-solving. I am particularly interested in opportunities where I can continue developing scalable systems, strengthen my machine-learning expertise, and work with teams that value thoughtful technical design.
+
+[View My Projects](projects.qmd){.btn .btn-primary}

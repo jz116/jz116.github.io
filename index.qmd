@@ -1,50 +1,45 @@
 ---
-title: "Home"
-jupyter: python3
+title: "Jiecheng Zhu"
+subtitle: "Computer Science | Applied Business Analytics | Machine Learning"
+description: "Portfolio of software engineering, data analytics, and machine learning projects."
+page-layout: full
+toc: false
 ---
 
-# Welcome
+I build reliable software and data-driven systems, from multithreaded network servers and distributed applications to full-stack platforms and intelligent navigation systems.
 
-This website documents my work in AD688: Big Data and Cloud Analytics for Business. It demonstrates a reproducible cloud analytics environment using AWS EC2, Python, PySpark, Quarto, Git, and GitHub.
+I hold a bachelor's degree in Computer Science from the University of California, Santa Cruz, and I am pursuing a master's degree in Applied Business Analytics at Boston University. My current interests include machine learning, deep learning, software engineering, and cloud-based analytics.
 
-## PySpark Demonstration
+[View My Projects](projects.qmd){.btn .btn-primary .btn-lg}
 
-The following code creates a small PySpark dataframe containing example career-match records and displays the records with the highest scores.
+[Learn More About Me](about.qmd){.btn .btn-outline-primary .btn-lg}
 
-```{python}
-#| label: tbl-career-sample
-#| tbl-cap: "Sample career-match records created with PySpark"
+## Areas of Focus
 
-import os
-from pyspark.sql import SparkSession
+::: {.grid}
 
-os.environ["SPARK_LOCAL_IP"] = "127.0.0.1"
+::: {.g-col-12 .g-col-md-4}
+### Software Engineering
 
-spark = (
-    SparkSession.builder
-    .master("local[1]")
-    .appName("AD688QuartoDemo")
-    .config("spark.driver.memory", "512m")
-    .config("spark.ui.enabled", "false")
-    .getOrCreate()
-)
+I design and implement reliable applications using C/C++, Python, JavaScript, Java, and modern software-development practices.
+:::
 
-spark.sparkContext.setLogLevel("ERROR")
+::: {.g-col-12 .g-col-md-4}
+### Data and Machine Learning
 
-records = [
-    ("Data Analyst", "Technology", 88),
-    ("Business Analyst", "Finance", 84),
-    ("Data Scientist", "Healthcare", 91),
-    ("Machine Learning Engineer", "Technology", 95),
-    ("Cloud Data Engineer", "Consulting", 89),
-]
+I use Python, SQL, R, and cloud technologies to prepare data, identify patterns, and develop practical analytical solutions.
+:::
 
-columns = ["career", "industry", "match_score"]
+::: {.g-col-12 .g-col-md-4}
+### Systems and Algorithms
 
-career_df = spark.createDataFrame(records, columns)
-preview = career_df.orderBy("match_score", ascending=False).toPandas()
+My experience includes networking, concurrency, distributed systems, data structures, graph algorithms, and A* path planning.
+:::
 
-spark.stop()
+:::
 
-preview
-```
+## Featured Projects
+
+My portfolio includes a multithreaded HTTP server, a distributed backup system using vector clocks, a full-stack key-value storage application, and an A*-based navigation system.
+
+[Explore All Projects →](projects.qmd){.btn .btn-primary}

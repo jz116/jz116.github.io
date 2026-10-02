@@ -4,22 +4,30 @@ project:
 website:
   title: "Jiecheng Zhu"
   navbar:
+    pinned: true
     left:
       - href: index.qmd
         text: Home
       - href: about.qmd
-        text: About
+        text: About You
+      - href: projects.qmd
+        text: Projects
+      - href: cv.qmd
+        text: CV
+      - href: contact.qmd
+        text: Contact
+
+  page-footer:
+    center: "© 2026 Jiecheng Zhu. Built with Quarto."
 
 format:
   html:
     theme: cosmo
     css: styles.css
-    toc: true
-    code-fold: false
+    toc: false
+    smooth-scroll: true
+    link-external-newwindow: true
 
 execute:
-  echo: true
+  echo: false
   warning: false
-
-
-

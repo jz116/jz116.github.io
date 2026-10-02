@@ -1,0 +1,130 @@
+---
+title: "Projects"
+description: "Selected software engineering, distributed systems, full-stack, and algorithm projects."
+page-layout: full
+toc: true
+toc-title: "Projects"
+---
+
+This portfolio highlights projects that demonstrate my experience with systems programming, distributed computing, full-stack development, algorithms, and intelligent navigation.
+
+::: {.project-card}
+
+## Multithreaded HTTP Server
+
+*January 2024 – March 2024*
+
+I developed a multithreaded HTTP server in C that processes simultaneous client connections and supports HTTP `GET` and `PUT` requests. The project strengthened my understanding of socket programming, concurrency, synchronization, and server-side file management.
+
+**Key engineering work:**
+
+- Created a new worker thread for each client connection.
+- Implemented HTTP request parsing and response generation.
+- Supported file uploads and downloads through `PUT` and `GET`.
+- Used semaphores and read-write locks to prevent unsafe concurrent file access.
+- Added client-server messaging alongside file-transfer functionality.
+
+**Technologies:** C, POSIX sockets, pthreads, semaphores, read-write locks, HTTP
+
+```{mermaid}
+flowchart TD
+    A[Client Requests] --> B[HTTP Listener]
+    B --> C[Worker Threads]
+    C --> D[Read Write Locks]
+    D --> E[Server Files]
+```
+
+:::
+
+::: {.project-card}
+
+## Distributed Multi-Server Backup System
+
+*April 2024 – June 2024*
+
+I built a distributed key-value storage and backup system consisting of three cooperating servers. The servers replicate data and use vector clocks to preserve causal relationships between updates.
+
+**Key engineering work:**
+
+- Implemented three asynchronous FastAPI servers.
+- Used vector clocks to track the causal order of key-value updates.
+- Replicated updated values and clock information between servers.
+- Compared client and server clocks before returning requested values.
+- Delayed stale responses until the server received an acceptable version.
+- Used Python coroutines and HTTPX for asynchronous communication.
+
+**Technologies:** Python, FastAPI, HTTPX, asynchronous programming, REST APIs, vector clocks
+
+```{mermaid}
+flowchart TD
+    A[Client] --> B[Server A]
+    A --> C[Server B]
+    A --> D[Server C]
+    B <--> C
+    C <--> D
+    B <--> D
+    B --> E[Replicated Key Value Data]
+    C --> E
+    D --> E
+```
+
+:::
+
+::: {.project-card}
+
+## Full-Stack Key-Value Storage System
+
+*July 2024 – September 2024*
+
+I developed a browser-based key-value storage application with a React frontend and an Express and MongoDB backend. The application provides a clear interface for adding, retrieving, and deleting stored values.
+
+**Key engineering work:**
+
+- Designed the frontend with reusable React components.
+- Created RESTful backend routes with Node.js and Express.
+- Stored and retrieved key-value records with MongoDB.
+- Supported both local and remote database connections.
+- Generated interactive API documentation with Swagger.
+- Connected frontend actions to backend JSON request and response flows.
+
+**Technologies:** React, JavaScript, Node.js, Express, MongoDB, Swagger, REST APIs
+
+```{mermaid}
+flowchart TD
+    A[React Interface] --> B[Express REST API]
+    C[Swagger Documentation] --> B
+    B --> D[MongoDB]
+    D --> B
+    B --> A
+```
+
+:::
+
+::: {.project-card}
+
+## A-Star Path Planning and Navigation System
+
+*January 2025 – March 2025*
+
+I implemented a navigation system for an intelligent vehicle in Unity. The system transforms a polygonal environment into convex navigation regions and uses the A-star algorithm to plan a valid route to a target.
+
+**Key engineering work:**
+
+- Identified concave inset points within polygonal maps.
+- Applied recursive bisection to divide maps into convex regions.
+- Represented neighboring regions as a searchable navigation graph.
+- Used A-star search to select an efficient path across the graph.
+- Generated waypoints from region centers and shared-edge midpoints.
+- Controlled vehicle movement while keeping it inside the map boundaries.
+
+**Technologies:** C#, Unity, A-star search, graph algorithms, computational geometry, path planning
+
+```{mermaid}
+flowchart TD
+    A[Polygonal Map] --> B[Convex Region Generation]
+    B --> C[Navigation Graph]
+    C --> D[A-Star Search]
+    D --> E[Vehicle Waypoints]
+```
+
+:::
