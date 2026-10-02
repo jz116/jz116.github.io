@@ -1,1 +1,302 @@
-/* css styles */
+/* Color system */
+:root {
+  --portfolio-navy: #12344d;
+  --portfolio-navy-light: #1c526f;
+  --portfolio-teal: #0b7f83;
+  --portfolio-teal-dark: #08666a;
+  --portfolio-text: #253746;
+  --portfolio-muted: #617282;
+  --portfolio-background: #f5f8fb;
+  --portfolio-card: #ffffff;
+  --portfolio-border: #dce5eb;
+  --portfolio-shadow: 0 8px 24px rgba(18, 52, 77, 0.08);
+}
+
+/* Global layout */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--portfolio-background);
+  color: var(--portfolio-text);
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif;
+  font-size: 1.03rem;
+  line-height: 1.7;
+}
+
+main.content {
+  max-width: 1180px;
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+}
+
+/* Navigation */
+.navbar {
+  background: linear-gradient(
+    110deg,
+    var(--portfolio-navy),
+    var(--portfolio-navy-light)
+  ) !important;
+  box-shadow: 0 3px 12px rgba(10, 35, 52, 0.18);
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
+}
+
+.navbar-brand {
+  color: #ffffff !important;
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+.navbar-nav .nav-link {
+  color: rgba(255, 255, 255, 0.88) !important;
+  border-radius: 0.35rem;
+  font-weight: 500;
+  margin: 0 0.1rem;
+  padding: 0.45rem 0.8rem !important;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus {
+  background: rgba(255, 255, 255, 0.12);
+  color: #ffffff !important;
+}
+
+.navbar-nav .nav-link.active {
+  background: rgba(255, 255, 255, 0.16);
+  color: #ffffff !important;
+}
+
+/* Page titles */
+.quarto-title {
+  background: var(--portfolio-card);
+  border-left: 5px solid var(--portfolio-teal);
+  border-radius: 0.65rem;
+  box-shadow: var(--portfolio-shadow);
+  margin-bottom: 2.25rem;
+  padding: 1.7rem 2rem;
+}
+
+.quarto-title h1.title {
+  color: var(--portfolio-navy);
+  font-size: clamp(2.2rem, 5vw, 3.6rem);
+  font-weight: 750;
+  letter-spacing: -0.035em;
+  margin-bottom: 0.4rem;
+}
+
+.quarto-title .subtitle {
+  color: var(--portfolio-teal-dark);
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+/* Typography */
+h1,
+h2,
+h3,
+h4 {
+  color: var(--portfolio-navy);
+  font-weight: 700;
+}
+
+h2 {
+  border-bottom: 2px solid var(--portfolio-border);
+  margin-top: 2.8rem;
+  padding-bottom: 0.45rem;
+}
+
+h3 {
+  color: var(--portfolio-navy-light);
+  margin-top: 1.4rem;
+}
+
+p {
+  margin-bottom: 1.1rem;
+}
+
+a {
+  color: var(--portfolio-teal-dark);
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.15em;
+}
+
+a:hover {
+  color: var(--portfolio-navy-light);
+}
+
+/* Buttons */
+.btn {
+  border-radius: 0.45rem;
+  font-weight: 650;
+  margin: 0.25rem 0.35rem 0.25rem 0;
+  padding: 0.65rem 1.15rem;
+  text-decoration: none;
+}
+
+.btn-primary {
+  background: var(--portfolio-teal);
+  border-color: var(--portfolio-teal);
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background: var(--portfolio-teal-dark);
+  border-color: var(--portfolio-teal-dark);
+}
+
+.btn-outline-primary {
+  border-color: var(--portfolio-teal);
+  color: var(--portfolio-teal-dark);
+}
+
+.btn-outline-primary:hover,
+.btn-outline-primary:focus {
+  background: var(--portfolio-teal);
+  border-color: var(--portfolio-teal);
+  color: #ffffff;
+}
+
+/* Grid cards */
+.grid {
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+  margin-top: 1.5rem;
+}
+
+.grid > [class*="g-col-"] {
+  background: var(--portfolio-card);
+  border: 1px solid var(--portfolio-border);
+  border-radius: 0.7rem;
+  box-shadow: var(--portfolio-shadow);
+  padding: 1.4rem;
+}
+
+.grid > [class*="g-col-"] h3 {
+  margin-top: 0;
+}
+
+/* Project cards */
+.project-card {
+  background: var(--portfolio-card);
+  border: 1px solid var(--portfolio-border);
+  border-left: 5px solid var(--portfolio-teal);
+  border-radius: 0.75rem;
+  box-shadow: var(--portfolio-shadow);
+  margin: 2rem 0;
+  padding: 1.5rem 1.8rem;
+}
+
+.project-card h2 {
+  border-bottom: 0;
+  margin-top: 0;
+  padding-bottom: 0;
+}
+
+.project-card strong {
+  color: var(--portfolio-navy);
+}
+
+/* Diagrams */
+.mermaid {
+  background: #f8fbfc;
+  border: 1px solid var(--portfolio-border);
+  border-radius: 0.6rem;
+  margin: 1.5rem auto;
+  overflow-x: auto;
+  padding: 1rem;
+  text-align: center;
+}
+
+/* Tables */
+table,
+.table {
+  background: var(--portfolio-card);
+  border: 1px solid var(--portfolio-border);
+  border-radius: 0.5rem;
+  box-shadow: var(--portfolio-shadow);
+  overflow: hidden;
+}
+
+thead {
+  background: var(--portfolio-navy);
+  color: #ffffff;
+}
+
+thead th {
+  color: #ffffff !important;
+  font-weight: 650;
+}
+
+tbody tr:nth-child(even) {
+  background: #f3f8fa;
+}
+
+/* Inline code */
+code {
+  background: #eaf1f5;
+  border-radius: 0.25rem;
+  color: #9b3045;
+  padding: 0.12rem 0.3rem;
+}
+
+/* Footer */
+.nav-footer {
+  background: var(--portfolio-navy);
+  color: rgba(255, 255, 255, 0.9);
+  min-height: 4rem;
+}
+
+.nav-footer a {
+  color: #ffffff;
+}
+
+/* Keyboard accessibility */
+a:focus-visible,
+button:focus-visible,
+.btn:focus-visible {
+  outline: 3px solid #f0b429;
+  outline-offset: 3px;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  body {
+    font-size: 1rem;
+  }
+
+  main.content {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .quarto-title {
+    padding: 1.25rem;
+  }
+
+  .project-card {
+    padding: 1.25rem;
+  }
+
+  .btn {
+    display: block;
+    margin: 0.65rem 0;
+    text-align: center;
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+

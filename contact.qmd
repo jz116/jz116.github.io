@@ -1,0 +1,52 @@
+---
+title: "Contact"
+description: "Professional contact information and networking links."
+page-layout: full
+toc: false
+---
+
+## Let's Connect
+
+I welcome opportunities to discuss software engineering, data analytics, machine learning, and technical projects. Please feel free to contact me through email or connect with me through my professional profiles.
+
+::: {.grid}
+
+::: {.g-col-12 .g-col-md-4 .contact-card}
+### Email
+
+For professional inquiries and networking:
+
+[Send Me an Email](mailto:jzhu116@bu.edu){.btn .btn-primary}
+:::
+
+::: {.g-col-12 .g-col-md-4 .contact-card}
+### GitHub
+
+View my source code, technical projects, and development activity:
+
+[Visit My GitHub](https://github.com/jz116){.btn .btn-outline-primary target="_blank"}
+:::
+
+::: {.g-col-12 .g-col-md-4 .contact-card}
+### LinkedIn
+
+Connect with me and view my professional profile:
+
+[Connect on LinkedIn](https://www.linkedin.com/){.btn .btn-outline-primary target="_blank"}
+:::
+
+:::
+
+## Areas of Interest
+
+I am especially interested in connecting about:
+
+- Software engineering and backend development
+- Data analytics and cloud computing
+- Machine learning and artificial intelligence
+- Distributed systems and networking
+- Technical collaboration and professional opportunities
+
+## Response
+
+Email is the best way to reach me. I will respond to professional messages as soon as possible.
